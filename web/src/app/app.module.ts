@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CaptureIframeImageComponent } from './page/capture-iframe-image/capture-iframe-image.component';
+import { HomeComponent } from './page/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CaptureIframeImageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
