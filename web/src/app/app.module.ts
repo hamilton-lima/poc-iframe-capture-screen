@@ -7,6 +7,7 @@ import { CaptureIframeImageComponent } from './page/capture-iframe-image/capture
 import { HomeComponent } from './page/home/home.component';
 import { CaptureUsingEventsComponent } from './page/capture-using-events/capture-using-events.component';
 import { EventEmitterComponent } from './page/capture-using-events/event-emitter/event-emitter.component';
+import { BouncingBallComponent } from './page/capture-using-events/event-emitter/bouncing-ball.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { EventEmitterComponent } from './page/capture-using-events/event-emitter
     HomeComponent,
     CaptureUsingEventsComponent,
     EventEmitterComponent,
+    BouncingBallComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

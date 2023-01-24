@@ -7,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaptureUsingEventsComponent implements OnInit {
   data = 'N/A';
+  origin = 'N/A';
+
   constructor() {}
 
   ngOnInit(): void {
     window.addEventListener(
       'message',
       (event) => {
-        console.log('message received', event);
         this.data = event.data;
+        this.origin = event.origin;
       },
       false
     );

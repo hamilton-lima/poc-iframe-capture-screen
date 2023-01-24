@@ -10,8 +10,8 @@ export class EventEmitterComponent implements OnInit {
   constructor() {}
   counter = 1;
   ngOnInit(): void {
-    interval(30).subscribe(() => {
-      parent.postMessage(this.counter++, window.location.href);
+    interval(20).subscribe(() => {
+      parent.postMessage(this.counter++, '*');
     });
   }
 }
