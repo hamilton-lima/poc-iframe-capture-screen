@@ -9,5 +9,14 @@ export class CaptureUsingEventsComponent implements OnInit {
   data = 'N/A';
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.addEventListener(
+      'message',
+      (event) => {
+        console.log('message received', event);
+        this.data = event.data;
+      },
+      false
+    );
+  }
 }
