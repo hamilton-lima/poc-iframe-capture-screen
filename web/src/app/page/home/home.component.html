@@ -1,14 +1,24 @@
-<h1>IFrame image manipulation and communication</h1>
+<section class="hero is-secondary">
+  <div class="hero-body">
+    <p class="title">IFrame image manipulation and communication</p>
+  </div>
+</section>
 
-
-capture IFRAME screen in sequence 
-<a routerLink="/capture">Capture Iframe screen</a>
-
-communication from parent to children IFRAME 
-- generate image from Iframe
-- send as event
-- update in the parent 
-- send it back to iframe
-
-
-
+<div class="tile">
+  <div class="tile is-parent is-vertical">
+    <article class="tile is-child notification is-primary">
+      <p class="title">Capture Iframe image</p>
+      <p class="subtitle"><a routerLink="/capture">Capture Iframe screen</a></p>
+    </article>
+    <article class="tile is-child notification is-warning">
+      <p class="title">
+        capture IFRAME screen in sequence communication from parent to children
+      </p>
+      <p class="subtitle">
+        <a routerLink="/events"
+          >Use window events to communicate from children to parent</a
+        >
+      </p>
+    </article>
+  </div>
+</div>
