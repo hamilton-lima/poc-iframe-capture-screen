@@ -7,11 +7,24 @@ import { interval } from 'rxjs';
   styleUrls: ['./event-emitter.component.scss'],
 })
 export class EventEmitterComponent implements OnInit {
-  constructor() {}
-  counter = 1;
+  counter = 0;
   ngOnInit(): void {
     interval(20).subscribe(() => {
-      parent.postMessage(this.counter++, '*');
+      this.counter++;
+      parent.postMessage(this.getCanvasImage(), '*');
     });
+  }
+
+  getCanvasImage() {
+    const quality = 0.85;
+    const canvas: HTMLCanvasElement = document.getElementById(
+      'canvas'
+    ) as HTMLCanvasElement;
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      const result = canvas.toDataURL('image/png', quality);
+      return result;
+    }
+    return '';
   }
 }

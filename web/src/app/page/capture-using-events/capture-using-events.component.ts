@@ -8,14 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class CaptureUsingEventsComponent implements OnInit {
   data = 'N/A';
   origin = 'N/A';
+  public capturedImage: string | undefined = undefined;
 
   constructor() {}
+
+  getBase64Image() {
+    if (this.capturedImage) {
+      return this.capturedImage;
+    }
+    return 'assets/no-image.png';
+  }
 
   ngOnInit(): void {
     window.addEventListener(
       'message',
       (event) => {
-        this.data = event.data;
+        this.capturedImage = event.data;
         this.origin = event.origin;
       },
       false

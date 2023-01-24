@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-bouncing-ball',
-  template: ` <canvas #canvas width="200" height="200"></canvas> `,
+  template: ` <canvas id="canvas" #canvas width="200" height="200"></canvas> `,
 })
 export class BouncingBallComponent {
   @ViewChild('canvas') canvas: ElementRef | undefined;
