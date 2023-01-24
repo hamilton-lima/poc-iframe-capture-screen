@@ -1,0 +1,24 @@
+<section class="hero is-warning block">
+  <div class="hero-body">
+    <p class="title">Capture Image using events</p>
+  </div>
+</section>
+
+<div class="columns box">
+  <div class="column">
+    <div class="block">
+      <h3>
+        Event Emitter - this page will send the content of a CANVAS every 30ms
+        using window.postMessage() and will receive back the same image with a
+        minor transformation
+      </h3>
+      <iframe #screen1 width="640" height="480" src="events/emitter"></iframe>
+    </div>
+  </div>
+  <div class="column">
+    <h3 class="block">Data received from Iframe</h3>
+    <div class="block">
+      {{ data }}
+    </div>
+  </div>
+</div>
