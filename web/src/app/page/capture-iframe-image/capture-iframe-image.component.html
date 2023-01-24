@@ -1,10 +1,41 @@
-<section class="hero is-primary">
+<section class="hero is-primary block">
   <div class="hero-body">
     <p class="title">Capture IFRAME Image</p>
   </div>
 </section>
 
-<div class="columns">
-  <div class="column">First column</div>
-  <div class="column">Second column</div>
+<div class="columns box">
+  <div class="column">
+    <div class="block">
+      <button class="button is-primary" (click)="captureOtherDomain()">
+        Capture other domain</button
+      ><br />
+      <button class="button is-primary" (click)="captureSameDomain()">
+        Capture same domain</button
+      ><br />
+      <img width="640" height="480" [src]="getBase64Image()" />
+    </div>
+  </div>
+  <div class="column">
+    <div class="block">
+      <h3>Iframe from another domain</h3>
+      <iframe
+        #screen1
+        width="640"
+        height="480"
+        src="https://bulma.io/"
+      ></iframe>
+    </div>
+  </div>
+  <div class="column">
+    <div class="block">
+      <h3>Iframe same domain</h3>
+      <iframe
+        #screen2
+        width="640"
+        height="480"
+        src="http://localhost:4200"
+      ></iframe>
+    </div>
+  </div>
 </div>
