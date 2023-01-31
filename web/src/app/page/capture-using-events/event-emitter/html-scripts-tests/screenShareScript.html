@@ -1,0 +1,19 @@
+<script>
+  setInterval(postMessage, 20);
+
+  function postMessage() {
+    parent.postMessage(JSON.stringify({practicespace:true,image:getCanvasImage()}), '*')
+   }
+
+  function getCanvasImage() {
+      const quality = 0.85;
+      const canvas= document.getElementById('canvasPS') ;
+        if (canvas) {
+          const ctx = canvas.getContext('2d');
+          const result = canvas.toDataURL('image/png', quality);
+          return result;
+        }
+      return '';
+   }
+
+</script>
